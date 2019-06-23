@@ -8,8 +8,8 @@
     <script type="text/javascript" src="https://cdn.pannellum.org/2.4/pannellum.js"></script>
     <style>
     #panorama {
-        width: 600px;
-        height: 400px;
+        width: 1600px;
+        height: 1000px;
     }
     </style>
 </head>
@@ -20,6 +20,7 @@
 var urlParams = new URLSearchParams(window.location.search);
 var imagePath = 'images/' + urlParams.get('image') + '.jpg';
 pannellum.viewer('panorama', {
+    "preview" : imagePath,
     "type": "equirectangular",
     "panorama": imagePath
 });
